@@ -79,3 +79,11 @@ tr:hover{
     padding: 25px;
     margin: 20px;
 }
+
+.cls {
+    color: aliceblue;
+}
+
+.cls {
+    color: aquamarine !important;
+}

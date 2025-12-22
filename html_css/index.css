@@ -48,3 +48,19 @@ img{
     align-items: center;
     text-align: center;
 }
+
+table{
+    padding: 10px;
+    margin: 12px;
+    text-align: center;
+}
+table,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    margin: 6px;
+}
+
+tr:hover{
+    background-color: aquamarine;
+}

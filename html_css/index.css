@@ -2,7 +2,23 @@
     margin: 0%;
     padding: 0%;
 }
+nav{
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.navbar {
+    flex: 1;
+    text-align: right;
+}
 
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+}
 .heading {
     color: blue;
     padding: 2px;
@@ -25,5 +41,10 @@ a{
     align-items: center;
     justify-content: space-between;
     background-color: antiquewhite;
+    text-align: center;
+}
+
+img{
+    align-items: center;
     text-align: center;
 }

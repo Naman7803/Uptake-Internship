@@ -64,3 +64,11 @@ table,th,td{
 tr:hover{
     background-color: aquamarine;
 }
+
+
+.btn{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}

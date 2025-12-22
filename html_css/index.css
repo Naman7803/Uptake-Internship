@@ -9,12 +9,20 @@
     margin: 5px;
 }
 
-p{
+/* p{
     color: red;
     font-style: italic;
     margin: 5px;
-}
+} */
 
 a{
     color: aquamarine;
+}
+
+.formatting{
+    padding: 5px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
 }

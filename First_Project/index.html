@@ -10,48 +10,53 @@
 
 <body>
     <div class="container">
-    <nav class="navbar">
-        <img src="logo.png" alt="logo">
-        <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Work</a></li>
-            <li><a href="">Testimonials</a></li>
-            <li><a href="">Contact</a></li>
-            <li> <img class="header-icon" src="bright-icon.png" alt="Icon Button"> </li>
-            <li><button>Download CV</button></li>
-        </ul>
-        <img class="menu" src="menu-icon.png" alt="menu">
-    </nav>
+        <nav class="navbar">
+            <img src="logo.png" alt="logo">
+            
+            <ul id="navlink">
+                <img class="close" src="close.png" alt="close" onclick="hidemenu()">
+                <li><a href="">About</a></li>
+                <li><a href="">Work</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Contact</a></li>
+                <li> <img class="header-icon" src="bright-icon.png" alt="Icon Button"> </li>
+                <li><button>Download CV</button></li>
+            </ul>
+            <img class="menu" src="menu-icon.png" alt="menu" onclick="showmenu()">
+        </nav>
 
-    <div class="profile">
-        <div class="column1">
-            <h1>Hi, I’m Sagar</h1>
-            <p>I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing)
-                exceptional digital experiences that are fast, accessible, visually appealing, and responsive.Even
-                though I have been creating web applications for over 7 years, I still love it as if it was something
-                new.
-            </p>
-            <div class="location">
-                <img src="location.png" alt="Active Icon">
-                <p>Ahmedabad, India</p>
+        <div class="profile">
+            <div class="column1">
+                <h1>Hi, I’m Sagar</h1>
+                <p>I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing)
+                    exceptional digital experiences that are fast, accessible, visually appealing, and responsive.Even
+                    though I have been creating web applications for over 7 years, I still love it as if it was
+                    something
+                    new.
+                </p>
+                <div class="location">
+                    <img src="location.png" alt="Active Icon">
+                    <p>Ahmedabad, India</p>
+                </div>
+                <div class="other">
+                    <img src="icon-dot-emerald-500.png" alt="Active Icon">
+                    <p>Available for new projects</p>
+                </div>
+                <div class="links">
+                    <button><img src="github.png" alt="github"></button>
+                    <button><img src="twitter.png" alt="titter"></button>
+                    <button><img src="figma.png" alt="figma"></button>
+                </div>
             </div>
-            <div class="other">
-                <img src="icon-dot-emerald-500.png" alt="Active Icon">
-                <p>Available for new projects</p>
-            </div>
-            <div class="links">
-                <button><img src="github.png" alt="github"></button>
-                <button><img src="twitter.png" alt="titter"></button>
-                <button><img src="figma.png" alt="figma"></button>
+            <div class="column2">
+                <img src="Pic.png" alt="Profile Picture">
             </div>
         </div>
-        <div class="column2">
-            <img src="Pic.png" alt="Profile Picture">
-        </div>
-    </div>
-    
-    <div class="about">
-            <div class="title-wrapper"><p class="section-title">About Me</p></div>
+
+        <div class="about">
+            <div class="title-wrapper">
+                <p class="section-title">About Me</p>
+            </div>
             <div class="about-info">
                 <div class="column3">
                     <img src="Pic-2.png" alt="About Picture">
@@ -81,9 +86,11 @@
 
                 </div>
             </div>
-    </div>
-    <div class="skills">
-            <div class="title-wrapper"><p class="section-title">Skills</p></div>
+        </div>
+        <div class="skills">
+            <div class="title-wrapper">
+                <p class="section-title">Skills</p>
+            </div>
             <p class="section-descr">The skills, tools and technologies I am really good at:</p>
             <div class="data">
                 <img src="icon-javscript.svg" alt="javascript">
@@ -103,10 +110,12 @@
                 <img src="icon-javscript.svg" alt="javascript">
                 <img src="icon-javscript.svg" alt="javascript">
             </div>
-    </div>
+        </div>
 
-    <div class="experience">
-            <div class="title-wrapper"><p class="section-title">Experience</p></div>
+        <div class="experience">
+            <div class="title-wrapper">
+                <p class="section-title">Experience</p>
+            </div>
             <p class="section-descr">Here is a quick summary of my most recent experiences:</p>
             <div class="experience-data">
                 <div class="experience-sub-data">
@@ -145,10 +154,12 @@
 
                 </div>
             </div>
-    </div>
+        </div>
 
-    <div class="work">
-            <div class="title-wrapper"><p class="section-title">Work</p></div>
+        <div class="work">
+            <div class="title-wrapper">
+                <p class="section-title">Work</p>
+            </div>
             <p class="section-descr">Some of the noteworthy projects I have built:</p>
             <div class="work-data">
                 <div class="work-col-1">
@@ -169,7 +180,7 @@
                 </div>
             </div>
             <div class="work-data reverse">
-                    <div class="work-col-1">
+                <div class="work-col-1">
                     <img src="fislik.png" alt="Project Fislik">
                 </div>
                 <div class="work-col-2">
@@ -186,11 +197,13 @@
                     <img src="share.png" alt="share icon">
                 </div>
             </div>
-    </div>
+        </div>
 
 
-    <div class="testimonials">
-            <div class="title-wrapper"><p class="section-title">Testimonials</p></div>
+        <div class="testimonials">
+            <div class="title-wrapper">
+                <p class="section-title">Testimonials</p>
+            </div>
             <p class="section-descr">Nice things people have said about me:</p>
             <div class="testimonials-data">
                 <div class="testimonials-card">
@@ -215,42 +228,83 @@
                     <p>Founder - xyz.com</p>
                 </div>
             </div>
+        </div>
+
+        <div class="getintouch">
+            <div class="title-wrapper">
+                <p class="section-title">Get in Touch</p>
+            </div>
+            <p class="section-descr">What’s next? Feel free to reach out to me if you're looking for a developer,
+                have a query, or simply want to connect.</p>
+            <div class="getintouch-data">
+                <div class="getintouch-email">
+                    <img src="email.png" alt="email">
+                    <p>reachsagarshah@gmail.com</p>
+                    <img src="copy.png" alt="copy">
+                </div>
+                <div class="getintouch-phone">
+                    <img src="phone.png" alt="phone">
+                    <p>+91 8980500565</p>
+                    <img src="copy.png" alt="copy">
+                </div>
+            </div>
+            <div class="getintouch-other">
+                <p>You may also find me on these platforms!</p>
+                <div class="getintouch-other-links">
+                    <button><img src="github.png" alt="github"></button>
+                    <button><img src="twitter.png" alt="titter"></button>
+                    <button><img src="figma.png" alt="figma"></button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="footer-data">
+                    <img src="copyright.png" alt="copyright">
+                    <p>2023 | Designed and coded with ❤️️ by Sagar Shah</p>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <div class="getintouch">
-        <div class="title-wrapper"><p class="section-title">Get in Touch</p></div>
-        <p class="section-descr">What’s next? Feel free to reach out to me if you're looking for a developer,
-            have a query, or simply want to connect.</p>
-        <div class="getintouch-data">
-            <div class="getintouch-email">
-                <img src="email.png" alt="email">
-                <p>reachsagarshah@gmail.com</p>
-                <img src="copy.png" alt="copy">
-            </div>
-            <div class="getintouch-phone">
-                <img src="phone.png" alt="phone">
-                <p>+91 8980500565</p>
-                <img src="copy.png" alt="copy">
-            </div>
-        </div>
-        <div class="getintouch-other">
-            <p>You may also find me on these platforms!</p>
-            <div class="getintouch-other-links">
-                <button><img src="github.png" alt="github"></button>
-                <button><img src="twitter.png" alt="titter"></button>
-                <button><img src="figma.png" alt="figma"></button>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer">
-            <div class="footer-data">
-                <img src="copyright.png" alt="copyright">
-                <p>2023 | Designed and coded with ❤️️ by Sagar Shah</p>
-            </div>
-        </div>
-    </footer>
-</div>
+    <script>
+        let navlink=document.getElementById('navlink');
+        let menuicon=document.querySelector('.menu');
+        let closeicon=document.querySelector('.close');
+        function showmenu(){
+            navlink.classList.add('active');
+            menuicon.classList.add('active');
+            closeicon.classList.add('active');
+        }
+
+        function hidemenu(){
+            navlink.classList.remove('active');
+            menuicon.classList.remove('active');
+            closeicon.classList.remove('active');
+        }
+
+
+
+//         let navlink = document.getElementById('navlink');
+// let menuIcon = document.querySelector('.menu');
+// let closeIcon = document.querySelector('.close');
+
+// function showmenu() {
+//     navlink.classList.add("active");
+//     menuIcon.classList.add("active");
+//     closeIcon.classList.add("active");
+// }
+
+// function hidemenu() {
+//     navlink.classList.remove("active");
+//     menuIcon.classList.remove("active");
+//     closeIcon.classList.remove("active");
+// }
+
+        
+
+    </script>
+
 </body>
 
 </html>

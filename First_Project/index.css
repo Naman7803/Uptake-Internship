@@ -101,6 +101,9 @@
 .menu{
     display: none;
 }
+.close{
+    display: none;
+}
 
 
 @media (max-width:800px){
@@ -108,19 +111,31 @@
         position: absolute;
         display: none;
         background-color: #FFFFFF;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 20px;
+        right: -100px;
+        /* height: 100vh; */
+        /* right: -200px; */
+        width: 50%;
         flex-direction: column;
         text-align: left;
         align-items: center;
         padding: 10px;
+        z-index: 1;
     }
-    .navbar ul.show{
+    .navbar ul.active{
         display: flex;
+        right: 0;
     }
     .menu{
         display: block;
+        cursor: pointer;
+    }
+    .menu.active{
+        display: none;
+    }
+
+    .close.active{
+        display:block;
         cursor: pointer;
     }
 }

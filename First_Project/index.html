@@ -1,238 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-    </style>
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">  
-        <img src="logo.png" alt="logo">  
+    <nav class="navbar">
+        <img src="logo.png" alt="logo">
         <ul>
             <li><a href="">About</a></li>
             <li><a href="">Work</a></li>
             <li><a href="">Testimonials</a></li>
             <li><a href="">Contact</a></li>
-            <li><img src="Icon Button.png" alt="Icon Button"></li>
+            <li> <img class="header-icon" src="bright-icon.png" alt="Icon Button"> </li>
             <li><button>Download CV</button></li>
         </ul>
-        </nav>
-    </header>
-    <section>
-        <div class="container">
-        <div class="profile">
-            <div class="column1">
-                <h1>Hi, I’m Sagar</h1>
-                <p>I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing) 
-                   exceptional digital experiences that are fast, accessible, visually appealing, and responsive.Even 
-                   though I have been creating web applications for over 7 years, I still love it as if it was something new.</p>
-                <div class="location">
-                    <span><img src="location.png" alt="Active Icon"></span><p>Ahmedabad, India</p>
-                </div>
-                <div class="other">
-                    <span><img src="icon-dot-emerald-500.png" alt="Active Icon"></span><p>Available for new projects</p>
-                </div>
-                <div class="links">
-                    <button><img src="github.png" alt="github"></button>
-                    <button><img src="twitter.png" alt="titter"></button>
-                    <button><img src="figma.png" alt="figma"></button>
-                </div>
-            </div>
-            <div class="column2">
-                <img src="Pic.png" alt="Profile Picture">
-            </div>
-        </div>
-        </div>
-        <div class="about">
-            <div class="about-me">
-                <div class="about-header">About Me</div>
-                <div class="about-info">
-                    <div class="column3">
-                        <img src="Pic-2.png" alt="About Picture">
-                    </div>
-                    <div class="column4">
-                        <h1>Curious about me? Here you have it:</h1>
-                        <p>I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me</p>
-                        <p>I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.</p>
-                        <p>I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to development.</p>
-                        <p>When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker, witnessing the journey of early startups or enjoying some free time. You can follow me on Twitter where I share tech-related bites and build in public, or you can follow me on GitHub.</p>
-                        <p>Finally, some quick bits about me.</p>
-                        <span>B.E. in Computer Engineering</span><span>Avid learner</span><br>
-                        <span>Full time freelancer</span><span>Aspiring indie hacker</span>
-                        <p>One last thing, I'm available for freelance work, so feel free to reach out and say hello! I promise I don't bite</p>
+        <img class="menu" src="menu-icon.png" alt="menu">
+    </nav>
 
-                    </div>
-                </div>
+    <div class="profile">
+        <div class="column1">
+            <h1>Hi, I’m Sagar</h1>
+            <p>I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing)
+                exceptional digital experiences that are fast, accessible, visually appealing, and responsive.Even
+                though I have been creating web applications for over 7 years, I still love it as if it was something
+                new.
+            </p>
+            <div class="location">
+                <img src="location.png" alt="Active Icon">
+                <p>Ahmedabad, India</p>
+            </div>
+            <div class="other">
+                <img src="icon-dot-emerald-500.png" alt="Active Icon">
+                <p>Available for new projects</p>
+            </div>
+            <div class="links">
+                <button><img src="github.png" alt="github"></button>
+                <button><img src="twitter.png" alt="titter"></button>
+                <button><img src="figma.png" alt="figma"></button>
             </div>
         </div>
-        <div class="skills">
-            <div class="skill-info">
-                <div class="skills-header">Skills</div>
-                <p class="skill-title">The skills, tools and technologies I am really good at:</p>
-                <div class="data">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
+        <div class="column2">
+            <img src="Pic.png" alt="Profile Picture">
+        </div>
+    </div>
+    
+    <div class="about">
+            <div class="title-wrapper"><p class="section-title">About Me</p></div>
+            <div class="about-info">
+                <div class="column3">
+                    <img src="Pic-2.png" alt="About Picture">
                 </div>
-                <div class="data">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
-                    <img src="icon-javscript.svg" alt="javascript">
+                <div class="column4">
+                    <h1>Curious about me? Here you have it:</h1>
+                    <p>I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js &
+                        Node.js). I am very enthusiastic about bringing the technical and visual aspects of digital
+                        products to life. User experience, pixel perfect design, and writing clear, readable, highly
+                        performant code matters to me</p>
+                    <p>I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve
+                        as a developer, taking on new challenges and learning the latest technologies along the way.
+                        Now, in my early thirties, 7 years after starting my web development journey, I'm building
+                        cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs,
+                        Tailwindcss, Supabase and much more.</p>
+                    <p>I am very much a progressive thinker and enjoy working on products end to end, from ideation all
+                        the way to development.</p>
+                    <p>When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie
+                        hacker, witnessing the journey of early startups or enjoying some free time. You can follow me
+                        on Twitter where I share tech-related bites and build in public, or you can follow me on GitHub.
+                    </p>
+                    <p>Finally, some quick bits about me.</p>
+                    <span>B.E. in Computer Engineering</span><span>Avid learner</span><br>
+                    <span>Full time freelancer</span><span>Aspiring indie hacker</span>
+                    <p>One last thing, I'm available for freelance work, so feel free to reach out and say hello! I
+                        promise I don't bite</p>
+
                 </div>
             </div>
-        </div>
-        <div class="experience">
-            <div class="experience-info">
-                <div class="experience-header">Experience</div>
-                <p class="experience-title">Here is a quick summary of my most recent experiences:</p>
-                <div class="experience-data">
-                    <div class="experience-sub-data">
-                        <div class="experience-col-1">
-                            <img src="logo-upwork.png" alt="upwork logo">
-                        </div>
-                        <div class="experience-col-2">
-                            <p>Sr. Frontend Developer</p>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Ut pretium arcu et massa semper, id fringilla leo semper.</li>
-                                <li>Sed quis justo ac magna.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-col-3">
-                            <p>Nov 2021 - Present</p>
-                        </div> 
+    </div>
+    <div class="skills">
+            <div class="title-wrapper"><p class="section-title">Skills</p></div>
+            <p class="section-descr">The skills, tools and technologies I am really good at:</p>
+            <div class="data">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+                <img src="icon-javscript.svg" alt="javascript">
+            </div>
+    </div>
+
+    <div class="experience">
+            <div class="title-wrapper"><p class="section-title">Experience</p></div>
+            <p class="section-descr">Here is a quick summary of my most recent experiences:</p>
+            <div class="experience-data">
+                <div class="experience-sub-data">
+                    <div class="experience-col-1">
+                        <img src="logo-upwork.png" alt="upwork logo">
                     </div>
-                    <div class="experience-sub-data">
-                        <div class="experience-col-1">
-                            <img src="logo-upwork.png" alt="upwork logo">
-                        </div>
-                        <div class="experience-col-2">
-                            <p>Sr. Frontend Developer</p>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                <li>Ut pretium arcu et massa semper, id fringilla leo semper.</li>
-                                <li>Sed quis justo ac magna.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-col-3">
-                            <p>Nov 2021 - Present</p>
-                        </div>
-                        
+                    <div class="experience-col-2">
+                        <p>Sr. Frontend Developer</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Ut pretium arcu et massa semper, id fringilla leo semper.</li>
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-col-3">
+                        <p>Nov 2021 - Present</p>
                     </div>
                 </div>
+                <div class="experience-sub-data">
+                    <div class="experience-col-1">
+                        <img src="logo-upwork.png" alt="upwork logo">
+                    </div>
+                    <div class="experience-col-2">
+                        <p>Sr. Frontend Developer</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Ut pretium arcu et massa semper, id fringilla leo semper.</li>
+                            <li>Sed quis justo ac magna.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-col-3">
+                        <p>Nov 2021 - Present</p>
+                    </div>
+
+                </div>
             </div>
-        </div>
-        <div class="work">
-            <div class="work-info">
-                <div class="work-header">Work</div>
-                <p class="work-title">Some of the noteworthy projects I have built:</p>
-                <div class="work-data">
+    </div>
+
+    <div class="work">
+            <div class="title-wrapper"><p class="section-title">Work</p></div>
+            <p class="section-descr">Some of the noteworthy projects I have built:</p>
+            <div class="work-data">
+                <div class="work-col-1">
+                    <img src="fislik.png" alt="Project Fislik">
+                </div>
+                <div class="work-col-2">
+                    <h1>Fislik</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac
+                        tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et
+                        ultrices posuere cubilia curae.</p>
+                    <div class="badges">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Typescript</span>
+                        <span>Nest.js</span>
+                    </div>
+                    <img src="share.png" alt="share icon">
+                </div>
+            </div>
+            <div class="work-data reverse">
                     <div class="work-col-1">
-                        <img src="fislik.png" alt="Project Fislik">
-                    </div>
-                    <div class="work-col-2">
-                        <h1>Fislik</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac 
-                            tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et
-                            ultrices posuere cubilia curae.</p>
-                        <div class="badges">
-                            <span>React</span>
-                            <span>Next.js</span>
-                            <span>Typescript</span>
-                            <span>Nest.js</span>
-                        </div>
-                        <img src="share.png" alt="share icon">
-                    </div>
+                    <img src="fislik.png" alt="Project Fislik">
                 </div>
-                <div class="work-data reverse">
-                    <div class="work-col-2">
-                        <img src="fislik.png" alt="Project Fislik">
+                <div class="work-col-2">
+                    <h1>Fislik</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac
+                        tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et
+                        ultrices posuere cubilia curae.</p>
+                    <div class="badges">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Typescript</span>
+                        <span>Nest.js</span>
                     </div>
-                    <div class="work-col-1">
-                        <h1>Fislik</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac 
-                            tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et
-                            ultrices posuere cubilia curae.</p>
-                        <img src="share.png" alt="share icon">
-                    </div>
-                    
+                    <img src="share.png" alt="share icon">
                 </div>
             </div>
-        </div>
-        <div class="testimonials">
-            <div class="testimonials-info">
-                <div class="testimonials-header">Testimonials</div>
-                <p class="testimonials-title">Nice things people have said about me:</p>
-                <div class="testimonials-data">
-                    <div class="testimonials-card">
-                        <img src="avatar.png" alt="Avtar">
-                        <p>“Job well done! I am really impressed. He is very very good at what he does:
-                             I would recommend Sagar and will rehire in the future for Frontend development.”</p>
-                        <h1>John Doe</h1>
-                        <p>Founder - xyz.com</p>
-                    </div>
-                    <div class="testimonials-card">
-                        <img src="avatar.png" alt="Avtar">
-                        <p>“Job well done! I am really impressed. He is very very good at what he does:
-                             I would recommend Sagar and will rehire in the future for Frontend development.”</p>
-                        <h1>John Doe</h1>
-                        <p>Founder - xyz.com</p>
-                    </div>
-                    <div class="testimonials-card">
-                        <img src="avatar.png" alt="Avtar">
-                        <p>“Job well done! I am really impressed. He is very very good at what he does:
-                             I would recommend Sagar and will rehire in the future for Frontend development.”</p>
-                        <h1>John Doe</h1>
-                        <p>Founder - xyz.com</p>
-                    </div>
+    </div>
+
+
+    <div class="testimonials">
+            <div class="title-wrapper"><p class="section-title">Testimonials</p></div>
+            <p class="section-descr">Nice things people have said about me:</p>
+            <div class="testimonials-data">
+                <div class="testimonials-card">
+                    <img src="avatar.png" alt="Avtar">
+                    <p>“Job well done! I am really impressed. He is very very good at what he does:
+                        I would recommend Sagar and will rehire in the future for Frontend development.”</p>
+                    <h1>John Doe</h1>
+                    <p>Founder - xyz.com</p>
+                </div>
+                <div class="testimonials-card">
+                    <img src="avatar.png" alt="Avtar">
+                    <p>“Job well done! I am really impressed. He is very very good at what he does:
+                        I would recommend Sagar and will rehire in the future for Frontend development.”</p>
+                    <h1>John Doe</h1>
+                    <p>Founder - xyz.com</p>
+                </div>
+                <div class="testimonials-card">
+                    <img src="avatar.png" alt="Avtar">
+                    <p>“Job well done! I am really impressed. He is very very good at what he does:
+                        I would recommend Sagar and will rehire in the future for Frontend development.”</p>
+                    <h1>John Doe</h1>
+                    <p>Founder - xyz.com</p>
                 </div>
             </div>
-        </div>
-        <div class="getintouch">
-            <div class="getintouch-info">
-                <div class="getintouch-header">Get in touch</div>
-                <p class="getintouch-title">What’s next? Feel free to reach out to me if you're looking for a developer, 
-                    have a query, or simply want to connect.</p>
-                <div class="getintouch-data">
-                    <div class="getintouch-email">
-                        <img src="email.png" alt="email">
-                        <p>reachsagarshah@gmail.com</p>
-                        <img src="copy.png" alt="copy">
-                    </div>
-                    <div class="getintouch-phone">
-                        <img src="phone.png" alt="phone">
-                        <p>+91 8980500565</p>
-                        <img src="copy.png" alt="copy">
-                    </div>
-                </div>  
-                <div class="getintouch-other">
-                    <p>You may also find me on these platforms!</p>
-                    <div class="getintouch-other-links">
-                        <button><img src="github.png" alt="github"></button>
-                        <button><img src="twitter.png" alt="titter"></button>
-                        <button><img src="figma.png" alt="figma"></button>
-                    </div>
-                </div>
+    </div>
+
+    <div class="getintouch">
+        <div class="title-wrapper"><p class="section-title">Get in Touch</p></div>
+        <p class="section-descr">What’s next? Feel free to reach out to me if you're looking for a developer,
+            have a query, or simply want to connect.</p>
+        <div class="getintouch-data">
+            <div class="getintouch-email">
+                <img src="email.png" alt="email">
+                <p>reachsagarshah@gmail.com</p>
+                <img src="copy.png" alt="copy">
+            </div>
+            <div class="getintouch-phone">
+                <img src="phone.png" alt="phone">
+                <p>+91 8980500565</p>
+                <img src="copy.png" alt="copy">
             </div>
         </div>
-    </section>
+        <div class="getintouch-other">
+            <p>You may also find me on these platforms!</p>
+            <div class="getintouch-other-links">
+                <button><img src="github.png" alt="github"></button>
+                <button><img src="twitter.png" alt="titter"></button>
+                <button><img src="figma.png" alt="figma"></button>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer">
             <div class="footer-data">
@@ -242,4 +250,5 @@
         </div>
     </footer>
 </body>
+
 </html>

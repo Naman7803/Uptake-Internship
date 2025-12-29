@@ -8,17 +8,21 @@
 }
 
 
-
-body{
+/* body{
     padding: 20px;
     margin: 20px;
+} */
+
+.container{
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* header css start */
 .navbar{
     background-color: #FFFFFF;
     /* padding: 20px; */
-    margin: 20px auto;
+    margin: 20px 0;
     padding: 0 20px;
     justify-content: space-between;
     display: flex;
@@ -147,7 +151,7 @@ body{
     /* margin-right: 25px; */
     /* margin-bottom: 25px;
     justify-content: space-between; */
-    margin: auto;
+    margin: 20px 0;
     padding: 20px 20px;
     justify-content: space-between;
     display: flex;
@@ -358,8 +362,8 @@ body{
     margin-top: 25px;*/
     /* margin-right: 25px;  */
     margin: 20px 0;
-    
     justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .column3{
@@ -463,7 +467,7 @@ body{
 } */
 
 .data{
-    justify-content: center;
+    /* justify-content: center; */
     display: grid;
     grid-template-columns: repeat(8,1fr);
     /* flex-wrap: wrap; */
@@ -471,10 +475,13 @@ body{
     /* height: 100px; */
     padding: 20px 0;
     margin-top: 20px;
+    justify-items: center;
+    /* align-items: center; */
 }
 
 .data img{
     max-width:64px;
+    /* align-items: center; */
     /* height: 64px; */
     /* display: block; */
 }
@@ -485,10 +492,10 @@ body{
         grid-template-columns: repeat(4,1fr);
         /* padding-top: 10px;
         margin-top: 10px; */
-        align-items: center;
-        justify-content: center;
-        padding:auto;
-        margin: auto;
+        /* align-items: center;
+        justify-content: center; */
+        /* padding:auto;
+        margin: auto; */
     }
 
 } 

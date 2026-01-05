@@ -168,6 +168,10 @@
 
 
 
+// foreach function
+
+// let arr=[1,2,3,4,5];
+// let res=arr.forEach(n => console.log(n));
 
 
 
@@ -198,8 +202,6 @@
 
 
 
-
-
 // function a(){
 //   console.log(b);
 // }
@@ -213,7 +215,6 @@
 
 
 // call stack
-
 
 // function a(){
 //     b();
@@ -280,6 +281,14 @@
 
 
 
+// anonymous arrow function
+
+// const greet=(name) => console.log("hello"+" "+name)
+// greet("john")
+
+
+
+
 
 //shadowing
 
@@ -298,6 +307,7 @@
 // console.log(a)
 // console.log(b)
 // console.log(c)
+
 
 
 
@@ -326,7 +336,6 @@
 
 
 
-
 // clousers 
 
 // function outer(){
@@ -346,7 +355,23 @@
 
 
 
-// settime out
+// setinterval
+
+// function myfunction(){
+//     console.log("hello");
+// }
+// let show=setInterval(myfunction,1000);
+
+// setTimeout(() => {
+//     clearInterval(show);
+//     console.log("bye");
+// },5000);
+
+
+
+
+
+// settimeout
 
 // console.log("start");
 // setTimeout(() => {
@@ -399,3 +424,612 @@
 //     }
 // }
 // x();
+
+
+
+
+
+// function statement/declaration
+
+// function a(){
+//     console.log("a");
+// }
+// a()
+
+
+
+// function expression
+
+// var b=function(){
+//     console.log("b");
+// }
+// b()
+
+
+
+// named function
+
+// var b=function abc(){
+//     console.log("b");
+// }
+// b()
+// abc()
+
+
+
+
+// first class function
+
+// function processUserInput(callback) {
+//     const name = "Bob";
+//     console.log(callback(name));
+// }
+
+// processUserInput(function(name) {
+//     return `Hi, ${name}!`;
+// });
+
+
+
+
+
+
+// call back function
+
+// function greet(name,callback){
+//     console.log(`hello, ${name}`);
+//     callback();
+// }
+
+// function goodbye(){
+//     console.log("Goodbye");
+// }
+
+// greet("john",goodbye);
+
+
+
+
+
+// event loop
+
+// console.log("start")
+
+// setTimeout(() =>{
+//     console.log("timeout");
+// },0);
+
+// console.log("end");
+
+
+
+
+
+
+// Array.prototype
+
+// Array.prototype.gMap = function(callback){
+//    let context = this;
+//    let result = [];
+//    for (let i = 0; i < context.length; i++) {
+//       let returnedVal = callback(context[i]);
+//       result.push(returnedVal);
+//    }
+//    return result;
+// }
+
+
+// let numbers = [1,2,3,4,5];
+// let data=numbers.gMap( e => e*2 );
+// console.log(data)
+
+
+
+
+
+// promise
+
+// let checkEven = new Promise((resolve, reject) => {
+//     let number = 3;
+//     if (number % 2 === 0) resolve("The number is even!");
+//     else reject("The number is odd!");
+// });
+// checkEven
+//     .then((message) => console.log(message)) // On success
+//     .catch((error) => console.error(error)); // On failure
+
+
+
+
+
+
+
+// promise
+
+// const promise=new Promise((resoleve,reject) =>{
+//     let success = true;
+//     if(success){
+//         resoleve("Successful");
+//     }
+//     else{
+//         reject("Failed");
+//     }
+// });
+
+
+// promise.then(result => {
+//     console.log(result);
+// })
+// .catch(error => {
+//     console.log(error);
+// })
+// .finally(() => {
+//     console.log("Promises settled");
+// });
+
+
+
+
+
+
+
+
+
+// array methods
+
+
+
+// check array
+
+// let arr=[1,2,3,4,5]
+// console.log(Array.isArray(arr));
+
+
+
+
+// toString()
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// let res=arr.toString();
+// console.log(res);
+
+
+
+
+
+// at function
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// let res=arr.at(2);
+// // let res=arr[2];
+// console.log(res);
+
+
+
+
+// join
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// let res=arr.join("|")
+// console.log(res)
+
+
+
+
+
+
+// push 
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// let res=arr.push("kiwi");
+// console.log(arr);
+
+
+
+
+// pop 
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// let res=arr.pop();
+// console.log(arr);
+
+
+
+// shift
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// let res=arr.shift();
+// console.log(arr);
+
+
+
+// unshift
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// let res=arr.unshift("kiwi");
+// console.log(arr);
+
+
+
+// change element
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// arr[0]="kiwi";
+// console.log(arr);
+
+
+
+// delete
+
+// let arr=["Banana", "Orange", "Apple", "Mango"];
+// delete arr[0];
+// console.log(arr);
+
+
+
+// concat
+
+// let myGirls = ["Cecilie", "Lone"];
+// let myBoys = ["Emil", "Tobias", "Linus"];
+
+// let child=myGirls.concat(myBoys)
+
+// console.log(myGirls);
+// console.log(myBoys);
+// console.log(child);
+
+
+
+// copyWithin
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.copyWithin(2,0);
+// console.log(fruits)
+
+
+
+// flat
+
+// let arr=[1, [2, [3, 4]]];
+// let res=arr.flat(2);
+// console.log(res);
+
+
+
+// flatMap
+
+// let arr=[1,2,3,4,5]
+// let res=arr.flatMap(n => [n,n*10]);
+// console.log(res);   
+
+
+
+
+
+// splice
+
+// 1.without delete
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2,0,"Lemon","Kiwi");
+// console.log(fruits);
+
+
+// 2.with delete
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2,2,"Lemon","Kiwi");
+// console.log(fruits);
+
+
+// 3.to remeove elements
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(0,1);
+// console.log(fruits);
+
+
+
+
+
+// toSpliced
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.toSpliced(0,1);
+// console.log(res)
+
+
+
+
+
+// slice
+
+// let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// let res=fruits.slice(1)
+// console.log(res)
+
+
+// let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// let res=fruits.slice(1,3)
+// console.log(res)
+
+
+
+
+// indexOf
+
+// let fruits = ["Apple", "Orange", "Apple", "Mango"];
+// let position=fruits.indexOf("Apple");
+// console.log(position);
+
+
+
+// lastIndexOf
+
+// let fruits = ["Apple", "Orange", "Apple", "Mango"];
+// let position=fruits.lastIndexOf("Apple");
+// console.log(position);
+
+
+
+
+// includes
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.includes("Mango");
+// console.log(res);
+
+
+
+
+
+// find
+
+// let arr=[1,2,3,4,5];
+// let res=arr.find(x => x>3);
+// console.log(res);
+
+
+// let res=arr.find(myfunction)
+// function myfunction(value,index,arr){
+//     return value>3;
+// }
+// console.log(res);
+
+
+
+
+
+// findIndex
+
+// let arr=[1,2,3,4,5];
+// let res=arr.findIndex(x => x>3);
+// console.log(res);
+
+
+// let res=arr.findIndex(myfunction)
+// function myfunction(value,index,arr){
+//     return value>3;
+// }
+// console.log(res);
+
+
+
+
+
+// findLast
+
+// let arr=[1,2,3,4,5];
+// let res=arr.findLast(x => x>3);
+// console.log(res);
+
+
+
+
+
+// findLastIndex
+
+// let arr=[1,2,3,4,5];
+// let res=arr.findLastIndex(x => x>3);
+// console.log(res);
+
+
+
+
+// sort
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.sort()
+// console.log(res)
+
+
+
+// reverse
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.reverse()
+// console.log(res)
+
+
+
+
+// sort + reverse
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.sort().reverse()
+// console.log(res)
+
+
+
+
+// toSorted
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.toSorted();
+// console.log(res)
+
+
+
+// toReversed
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.toReversed();
+// console.log(res)
+
+
+
+
+// sort numerically
+
+// let points = [40, 100, 1, 5, 25, 10];
+// let res=points.sort(function(a,b){return a-b})
+// console.log(res)
+
+
+
+
+// find minimum
+
+// let points = [40, 100, 1, 5, 25, 10];
+// let res=points.sort(function(a,b){return a-b});
+// console.log(res[0]);
+
+// let res=Math.min.apply(null,points);
+// console.log(res);
+
+
+
+
+// find maximum
+
+// let points = [40, 100, 1, 5, 25, 10];
+// let res=points.sort(function(a,b){return b-a});
+// console.log(res[0]);
+
+// let res=Math.max.apply(null,points);
+// console.log(res);
+
+
+
+
+
+// sorting object array
+
+// const cars = [
+//   {type:"Volvo", year:2016},
+//   {type:"Saab", year:2001},
+//   {type:"BMW", year:2010}
+// ];
+
+// let res=cars.sort(function(a,b){return a.year-b.year});
+// console.log(res)
+
+
+
+
+// every
+
+// let numbers = [45, 4, 9, 16, 25];
+
+// let res=numbers.every(x => x>18)
+
+// let res=numbers.every(myfunction);
+
+// function myfunction(value) {
+//     return value>18;
+// }
+// console.log(res);
+
+
+
+
+// some
+
+// let numbers = [45, 4, 9, 16, 25];
+
+// let res=numbers.some(x => x>18)
+
+// let res=numbers.some(myfunction);
+
+// function myfunction(value) {
+//     return value>18;
+// }
+// console.log(res);
+
+
+
+
+// from
+
+// let arr=[1,2,3,4,5]
+// let res=Array.from(arr,x => x*2);
+// console.log(res)
+
+// console.log(Array.from("hello"))
+
+
+
+// keys
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let keys=fruits.keys();
+// for(let x of keys){
+//     console.log(x);
+// }
+
+
+
+
+
+// values
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let keys=fruits.values();
+// for(let x of keys){
+//     console.log(x);
+// }
+
+
+
+// valueOf
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res = fruits.valueOf();
+// console.log(res)
+
+
+
+
+// entries
+
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let res=fruits.entries();
+// for(let x of res){
+//     console.log(x);
+// }
+
+
+
+
+// with
+
+// let months = ["Januar", "Februar", "Mar", "April"];
+// let res=months.with(2,"March");
+// console.log(res);
+
+
+
+
+// spread(...)
+
+// let arr1=[1,2,3];
+// let arr2=[4,5,6];
+
+// let arr3=[...arr1,...arr2];
+// console.log(arr3);
+
+
+
+// rest(...)
+
+// let a,rest;
+// let arr=[1,2,3,4,5,6];
+// [a,...rest]=arr;
+// console.log(rest)

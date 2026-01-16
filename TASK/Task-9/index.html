@@ -6,33 +6,67 @@
     <title>Document</title>
 
     <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form{
+            padding: 10px;
+        }
+
+        .form input{
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .form label{
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .display{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .table{
+            padding: 10px;
+        }
+
         table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
         padding: 5px 10px;
-        
         }
     </style>
 </head>
 <body>
-    <form class="form">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="age">Age:</label><br>
-        <input type="text" id="age" name="age" required><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email" required><br><br>
-        <input type="submit" value="submit">
-    </form>
-    <p></p>
+    <div class="container">
+        <form class="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    
+    <!-- <p></p> -->
     <!-- <p id="p"></p> -->
-    <table class="table">
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Email</th>
-    </tr>
-    </table>
+    <div class="display">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </table>
+    </div>
+    
     <script>
         const add=document.querySelector('.form');
         const data=document.querySelector('.table');

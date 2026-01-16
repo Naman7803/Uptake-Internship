@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px 10px;
+        
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age" required><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" required><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <p></p>
+    <!-- <p id="p"></p> -->
+    <table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+    </tr>
+    </table>
+    <script>
+        const add=document.querySelector('.form');
+        const data=document.querySelector('.table');
+        const details=[];
+
+        function additem(e){
+
+            e.preventDefault();
+            const name=(this.querySelector('[name=name]')).value;
+            const age=(this.querySelector('[name=age]')).value;
+            const email=(this.querySelector('[name=email]')).value;
+
+            const row=document.createElement('tr');
+            
+
+            row.innerHTML=`
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${email}</td>
+            `;  
+            data.appendChild(row);
+
+            const col=document.createElement('td');
+            const btn=document.createElement('button');
+            btn.innerText='Update';
+            btn.className='update';
+            row.appendChild(col);
+            col.appendChild(btn);
+
+            const edit=document.querySelector('.update');
+
+            
+
+            function updateitem(){
+                console.log('hello');
+            }
+
+            
+            edit.addEventListener('click',updateitem);  
+
+
+
+            // const details=[name,age,email]
+            // details.forEach((detail) =>{
+            //     var tr=document.createElement('tr');
+            //     var td=document.createElement('td');
+            //     var text=document.createTextNode(item);
+            //     td.appendChild(text);
+            //     tr.appendChild(td);
+            //     data.appendChild(tr);
+            // })
+            // const detail={
+            //     name,
+            //     age,
+            //     email
+            // };
+            // details.push(detail);
+            // populateList(details,data);
+            // // p.innerHTML+=`<h2>${i[name]}</h2>`;
+            this.reset();
+        }
+
+        // function populateList(table=[],tabledata){
+        //     tabledata.innerHTML=table.map((t,i)=>{
+        //     return `
+        //         <tr data-index=${i} id='detail${i}'>
+        //             <td>${t.name}</td>
+        //             <td>${t.age}</td>
+        //             <td>${t.email}</td>
+        //         </tr>
+        //     `;
+        // }).join('');
+        // }
+
+       
+
+        add.addEventListener('submit',additem);
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

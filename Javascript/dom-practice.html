@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <p>Please rate the service:</p>
+    <p id="p">
+        <label for="very-poor">
+            <input type="radio" name="rate" value="Very poor" id="very-poor"> Very poor
+        </label>
+        <label for="poor">
+            <input type="radio" name="rate" value="Poor" id="poor"> Poor
+        </label>
+        <label for="ok">
+            <input type="radio" name="rate" value="OK" id="ok"> OK
+        </label>
+        <label for="good">
+            <input type="radio" name="rate" value="Good"> Good
+        </label>
+        <label for="very-good">
+            <input type="radio" name="rate" value="Very Good" id="very-good"> Very Good
+        </label>
+    </p>
+    <p>
+        <button id="btnRate">Submit</button>
+    </p>
+    <p id="output"></p>
+    <script>
+        // let p=document.getElementById('p');
+        // console.log(p.innerHTML)
+        
+        let btn=document.getElementById('btnRate');
+        let output=document.getElementById('output');
+
+
+        let p=document.querySelector('p');
+        p.prepend("hello");
+        console.log(p.textContent);
+
+
+        btn.addEventListener('click',() => {
+            let rates=document.getElementsByName('rate');
+            rates.forEach((rate) => {
+                if(rate.checked){
+                    output.innerText=`You Selected ${rate.value}`;
+                }
+            })
+        })
+
+        // let age=100
+        // let age2=age
+        // console.log(age,age2)
+        // age=200
+        // console.log(age,age2)
+
+
+        // let name='john'
+        // let name2=name
+        // console.log(name,name2)
+        // name='doe'
+        // console.log(name,name2)
+
+
+        // const players=['was','sarah','ryan','poppy']
+        // const team=players;
+        // console.log(players,team)
+
+
+
+        // Shallow Copy
+
+        // let employee={
+        //     id:'101',
+        //     name:'john',
+        //     address:'usa',
+        //     salary:20000
+        // };
+
+        // let newEmployee={...employee};
+        
+        // console.log(employee)
+        // console.log(newEmployee)
+
+        // newEmployee.name='jack';
+        // console.log(employee)
+        // console.log(newEmployee)
+
+
+        // Deep Copy
+
+        // let employee={
+        //     id:'101',
+        //     name:'john',
+        //     address:'usa',
+        //     salary:20000
+        // };
+
+        // let newEmployee=JSON.parse(JSON.stringify(employee));
+
+        
+        // console.log(employee)
+        // console.log(newEmployee)
+
+        // newEmployee.name='jack';
+        // console.log(employee)
+        // console.log(newEmployee)
+
+
+
+    </script>
+</body>
+</html>

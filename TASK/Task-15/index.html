@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1c8379a410.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,h2,h3,h4,h5,h6, p {
+        margin: 10px;
+        padding: 20px;
+        /* height: 20vh; */
+    }
+    
+    .nav{
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /* overflow: hidden; */
+        background-color: #333333;
+    }
+
+    ul li {
+        margin: 10px;
+        position: relative;
+        /* align-items: center; */
+        float: left;
+    }
+
+    ul li a {
+        display: block; 
+        color: white;
+        text-align: center;
+        padding: 14px;
+        /* margin: 10px; */
+        text-decoration: none;
+        position: relative;
+    }
+
+    ul li a:hover {
+        background-color: #111111;
+    }
+
+    li.logo{
+        background-color: white;
+        max-width: 0;
+        overflow: hidden;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .box{
+        display: flex;
+        width: 100%;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+
+    .fixed-nav {
+        position: fixed;
+    }
+
+    .fixed-nav li.logo{
+        max-width: 500px;
+    }
+
+    .hamburger{
+        display: none;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        background-color: #333333;
+    }
+
+    .close{
+        display: none;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        background-color: #333333;
+    }
+
+    @media (max-width: 900px){
+        .hamburger{
+            display: block;
+        }
+
+        .close{
+            display:  block;
+        }
+        
+
+        .nav-links{
+            display: none;
+            flex-direction: column;
+        }   
+
+        .nav-links.show{
+            display: flex;
+        }
+
+        .nav-links li{
+            margin: 5px;
+        }
+    }
+ 
+
+    /* ul li a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #A6A6A6;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) scaleY(0);
+        transition: all 0.4s;
+    }
+ 
+    ul li a:hover::before {
+        transform: translateX(-50%) scaleY(1);
+    } */
+
+</style>
+
+<body>
+    <div class="box">
+        Scroll
+    </div>
+    <nav class="nav">
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="close" id="close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul class="nav-links">
+            <!-- <li class="logo">Logo</li> -->
+            <li class="home"><a href="#home">Home</a></li>
+            <li class="news"><a href="#news">News</a></li>
+            <li class="contact"><a href="#contact">Contact</a></li>
+            <li class="about"><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    
+    
+    <p>
+        This paragraph
+        contains a lot of lines
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+    
+    <p>
+        This paragraph
+        contains a lot of spaces
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+    
+    <p>
+        The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the
+        number of lines in this paragraph will change.
+    </p>
+
+    <p>
+        This paragraph
+        contains a lot of lines
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+    
+    <p>
+        This paragraph
+        contains a lot of spaces
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+    
+    <p>
+        The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the
+        number of lines in this paragraph will change.
+    </p>
+
+    <p>
+        This paragraph
+        contains a lot of lines
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+    
+    <p>
+        This paragraph
+        contains a lot of spaces
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+    
+    <p>
+        The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the
+        number of lines in this paragraph will change.
+    </p>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <script>
+        const nav=document.querySelector('.nav');
+        const topOfNav=nav.offsetTop;
+        const hamburger=document.querySelector('.hamburger');
+        const closemenu=document.querySelector('.close')
+        const navlinks=document.querySelector('.nav-links')
+
+        function fixNav(){
+            // console.log(topOfNav,window.scrollY)
+            if(window.scrollY>=topOfNav){
+                // nav.style.paddingTop=nav.offsetHeight+'px';
+                nav.classList.add('fixed-nav');
+            }
+            else{
+                // nav.style.paddingTop=0;
+                nav.classList.remove('fixed-nav');
+            }
+        }
+
+        nav.removeChild(closemenu)
+        window.addEventListener('scroll',fixNav);
+        hamburger.addEventListener('click',() =>{
+            navlinks.classList.add('show');
+            hamburger.replaceWith(closemenu)
+            // nav.removeChild(hamburger)
+            // nav.appendChild(closemenu)
+        })
+
+        closemenu.addEventListener('click',() =>{
+            navlinks.classList.remove('show');
+            closemenu.replaceWith(hamburger)
+        })
+        
+
+    </script>
+
+</body>
+</html>

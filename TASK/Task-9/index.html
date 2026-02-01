@@ -4,271 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 
-    <style>
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .form {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            margin: 10px;
-        }
-
-
-        #submit{
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            padding: 5px;
-        }
-
-
-        .display {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-        }
-
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 5px 10px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
-        <form class="form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="age">Age:</label>
-            <input type="text" id="age" name="age" required><br>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required><br><br>
-            <input id="submit" type="submit" value="submit">
-        </form>
+        <div class="cls1">
+            <form class="form">
+                <h1>Enter Your Data:</h1>
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Name" id="name" name="name" required><br>
+                
+                <label for="age">Age:</label>
+                <input type="text" placeholder="Age"  id="age" name="age" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Email"  id="email" name="email" required><br>
+            
+                <label for="role">Select Role:</label>
+                <select name="role" id="role" required><br><br>
+                    <option value="">Select Role:</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+                
+                <input id="submit" type="submit" value="Submit">
+            </form>
+            <button type="submit" class="btn-logout">Logout</button>
+        </div>
+
+        <div class="cls2">
+            <table class="table">
+                <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+            </table>
+        </div>
+        
+
+        
     </div>
 
-    <div class="display">
+    <!-- <div class="display">
         <table class="table">
             <tr>
+                <th>Index</th>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Email</th>
             </tr>
         </table>
-    </div>
+    </div> -->
 
 
-    <!-- With local array -->
-
-    <script>
-
-        const add = document.querySelector('.form');
-        const data = document.querySelector('.table');
-        const details = [];
-        let currindex=null;
-
-        function display() {
-            data.innerHTML = `
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Email</th>
-                </tr>
-            `
-            details.forEach((detail, index) => {
-                const row = document.createElement('tr');
-
-                row.innerHTML = `
-                    <td>${detail.name}</td>
-                    <td>${detail.age}</td>
-                    <td>${detail.email}</td>
-                `;
-                data.appendChild(row);
-
-
-
-                const col1 = document.createElement('td');
-                const updatebtn = document.createElement('button');
-                updatebtn.innerText = 'Update';
-                updatebtn.className = 'update';
-                row.appendChild(col1);
-                col1.appendChild(updatebtn);
-
-                updatebtn.addEventListener('click', updateitem)
-
-                function updateitem() {
-
-                    add.name.value = detail.name;
-                    add.age.value = detail.age;
-                    add.email.value = detail.email;
-                    currindex = index;
-
-
-
-                    // let name=detail.name;
-                    // let age=detail.age;
-                    // let email=detail.email;
-
-                    // console.log(detail.name)
-                    // console.log('hello');
-                }
-
-
-
-                const col2 = document.createElement('td');
-                const deletebtn = document.createElement('button');
-                deletebtn.innerText = 'Delete';
-                deletebtn.className = 'delete';
-                row.appendChild(col2);
-                col2.appendChild(deletebtn);
-
-                deletebtn.addEventListener('click', deleteitem)
-
-                function deleteitem() {
-                    details.splice(index, 1);
-                    display();
-                }
-
-
-            })
-        }
-
-        function additem(e) {
-
-            e.preventDefault();
-            const name = (this.querySelector('[name=name]')).value;
-            const age = (this.querySelector('[name=age]')).value;
-            const email = (this.querySelector('[name=email]')).value;
-
-            if (currindex !== null) {
-                details[currindex] = { name, age, email };
-                currindex = null;
-            }
-            else{
-                details.push({ name, age, email });
-            }
-
-
-            display();
-
-            this.reset();
-        }
-
-        add.addEventListener('submit', additem);
-
-    </script>
-
-
-
-    <!-- With localstorage -->
-
-    <!-- <script>
-
-        const add = document.querySelector('.form');
-        const data = document.querySelector('.table');
-        const details = JSON.parse(localStorage.getItem('details')) || [];
-        let currindex=null;
-
-        function display(){
-            data.innerHTML=`
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Email</th>
-                </tr>
-            `
-
-            details.forEach((detail,index) =>{
-                const row=document.createElement('tr');
-
-                row.innerHTML=`
-                    <td>${detail.name}</td>
-                    <td>${detail.age}</td>
-                    <td>${detail.email}</td>
-                `;
-                data.appendChild(row);
-
-
-                const col1=document.createElement('td');
-                const updatebtn=document.createElement('button');
-                updatebtn.innerText='Update';
-                updatebtn.className='update';
-                row.appendChild(col1);
-                col1.appendChild(updatebtn);
-
-                updatebtn.addEventListener('click',updateitem)
-
-                function updateitem(){
-                    add.name.value = detail.name;
-                    add.age.value = detail.age;
-                    add.email.value = detail.email;
-                    currindex = index;
-                }
-
-
-
-
-                const col2=document.createElement('td');
-                const deletebtn=document.createElement('button');
-                deletebtn.innerText='Delete';
-                deletebtn.className='delete';
-                row.appendChild(col2);
-                col2.appendChild(deletebtn);
-
-                deletebtn.addEventListener('click',deleteitem)
-
-                function deleteitem(){
-                    details.splice(index,1  )
-                    localStorage.setItem('details',JSON.stringify(details));
-                    display()
-                }
-
-            })
-        }
-
-        
-
-        function additem(e){
-            e.preventDefault();
-            const name=(this.querySelector('[name=name]')).value;
-            const age=(this.querySelector('[name=age]')).value;
-            const email=(this.querySelector('[name=email]')).value;
-
-            if (currindex !== null) {
-                details[currindex] = { name, age, email };
-                currindex = null;
-            }
-            else{
-                details.push({ name, age, email });
-            }
-
-           
-
-            localStorage.setItem('details',JSON.stringify(details));
-
-            display();
-
-            this.reset()
-        }
-
-        add.addEventListener('submit',additem);
-    
-
-
-    </script> -->
+    <script src="index.js"></script>
+    <!-- <script src="localarray.js"></script> -->
 
 </body>
 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .timer{
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            margin: 5px;
+            background-color: cadetblue;
+        }
+
+        .timer_controls{
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .timer_button{
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: azure;
+            border: none;
+            border-radius: 5px;
+        }
+
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        input{
+            /* display: flex; */
+            /* position:relative ; */
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: large;
+            /* width: 100%; */
+        }
+
+        .display{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: large;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="timer">
+        <div class="timer_controls">
+            <button data-time="20" class="timer_button">20 secs</button>
+            <button data-time="300" class="timer_button">Work 5</button>
+            <button data-time="900" class="timer_button">Quick 15</button>
+            <button data-time="1200" class="timer_button">Snack 20</button>
+            <button data-time="3600" class="timer_button">Lunch Break</button>
+            <form name="customForm" onsubmit="" id="custom">
+                <input type="text" name="minutes" placeholder="Enter Minutes">
+            </form>
+            <div class="display">
+                <h1 class="display_time-left"></h1>
+                <p class="display_end-time"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

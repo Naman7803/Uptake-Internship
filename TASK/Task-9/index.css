@@ -1,0 +1,172 @@
+.container {
+    /* width: 800px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.cls1 {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+}
+
+.form {
+    /* width: 300px;  */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: antiquewhite;
+    /* justify-content: ; */
+}
+
+label {
+    display: block;
+    margin: 5px;
+    font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"] {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#role{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#submit {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.edit {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.delete {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.update {
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.cancel {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    /* margin: 5px; */
+}
+
+
+.btn-logout{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    }
+
+
+
+/* .display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        } */
+
+.cls2 {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    overflow-y: scroll;
+
+}
+
+.table {
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex: 1; */
+    /* width: 200px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+/* table{
+            width: 100%;
+        } */
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px 10px;
+    text-align: center;
+    /* width: 100%; */
+    /* justify-content: center;
+            align-items: center; */
+}
+
+th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* td{
+            text-align: center;
+        } */

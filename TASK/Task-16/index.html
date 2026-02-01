@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        #grandparent {
+            background-color: green;
+            width: 300px;
+            height: 300px;
+        }
+
+        #parent {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+
+        #child {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="grandparent">GrandParent
+            <div id="parent">Parent
+                <div id="child"> Child</div>
+            </div>
+        </div>
+    </div>
+    <!-- <input type="search" name="search" id="search"> -->
+    <script>
+
+        const grandParent = document.getElementById("grandparent");
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        // event capturing
+        // grandParent.addEventListener("click", (e) => {
+        //     console.log("GrandParent");
+        // }, { capture: true });
+        // parent.addEventListener("click", (e) => {
+        //     console.log("Parent");
+        // }, { capture: true });
+        // child.addEventListener("click", (e) => {
+        //     console.log("Child");
+        // }, { capture: true });
+
+
+        // event bubbling
+        // grandParent.addEventListener("click", (e) => {
+        //     console.log("GrandParent");
+        // }, { capture: false });
+        // parent.addEventListener("click", (e) => {
+        //     console.log("Parent");
+        // }, { capture: false });
+        // child.addEventListener("click", (e) => {
+        //     console.log("Child");
+        // }, { capture: false });
+
+
+
+
+
+        // debouncing
+
+        // function debounce(func, delay) {
+        //     let timer;
+        //     return function () {
+        //         const context = this;
+        //         const args = arguments;
+        //         clearTimeout(timer);
+        //         timer = setTimeout(() => func.apply(context, args), delay)
+        //     };
+        // }
+
+        // const x = document.querySelector('input');
+
+        // x.addEventListener('input', debounce(function () {
+        //     console.log(x.value);
+        // }, 500));
+
+    
+
+
+        // throttling 
+
+        // function throttle(myFunc, delay) {
+        //     let timerFlag = null; 
+        //     return (...args) => {
+        //         if (timerFlag === null) { 
+        //             myFunc(...args); 
+        //             timerFlag = setTimeout(() => { 
+        //                 timerFlag = null; 
+        //             }, delay);
+        //         }
+        //     };
+        // }
+
+        // window.addEventListener('keyup', throttle(function(e) {
+        //     console.log(e.which);
+        // }, 500));
+
+
+
+           
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1139,3 +1139,85 @@
 
 // const arr=["apple","orange","mango"];
 // console.log(arr[1])
+
+
+
+
+
+
+
+
+// async function fetchforecast() {
+//     try {
+//         const apikey = 'uI92Hp2VOdXDRSGRtA3vLtdt7IS1CVJf6xWsugdK';
+//         const baseurl = 'https://api.api-ninjas.com/v1/weatherforecast';
+//         const url = `${baseurl}?lat=${latitude}&lon=${longitude}&x-Api-Key=${apikey}`;
+
+//         const response = await fetch(url);
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! Status: ${response.status}`);
+//         }
+
+//         const data = await response.json();
+
+//         // Group by date
+//         const grouped = data.reduce((acc, d) => {
+//             const date = new Date(d.timestamp * 1000).toLocaleDateString();
+//             if (!acc[date]) acc[date] = [];
+//             acc[date].push(d);
+//             return acc;
+//         }, {});
+
+//         // Take only first 5 dates
+//         const limitedDates = Object.keys(grouped).slice(0, 5);
+
+//         // Build HTML
+//         display.innerHTML = limitedDates.map(date => {
+//             return `
+//                 <tr><th colspan="10">${date}</th></tr>
+//                 ${grouped[date].map(d => `
+//                     <tr>
+//                         <td>${new Date(d.timestamp * 1000).toLocaleTimeString()}</td>
+//                         <td>${d.temp}</td>
+//                         <td>${d.feels_like}</td>
+//                         <td>${d.humidity}</td>
+//                         <td>${d.min_temp}</td>
+//                         <td>${d.max_temp}</td>
+//                         <td>${d.weather}</td>
+//                         <td>${d.cloud_pct}</td>
+//                         <td>${d.wind_speed}</td>
+//                         <td>${d.wind_degrees}</td>
+//                     </tr>
+//                 `).join('')}
+//             `;
+//         }).join('');
+
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+
+
+
+
+
+// group by
+
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 5 },
+  { name: "bananas", type: "fruit", quantity: 0 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 5 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+// const result=Object.groupBy(inventory,({type}) =>type)
+// console.log(result)
+
+
+function mycallback({quantity}){
+    return quantity>5?'ok':'restock';
+}
+const result=Object.groupBy(inventory,mycallback)
+console.log(result)

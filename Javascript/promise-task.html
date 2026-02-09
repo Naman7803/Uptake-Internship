@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(to right,
+                    #4b6a71, #645b69, #413939);
+    }
+    .wrapper{
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .longitude,.latitude,.city{
+        border-radius: 5px;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    }
+
+    .weather-detail{
+        /* background-color: aquamarine; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .weather-detail-data{
+        border-radius: 5px;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+        font-weight: bold; 
+        color: white; 
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    }
+
+    .forecast{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        color: white;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        /* text-align: left; */
+        /* background-color: #04AA6D; */
+        color: white;
+    }
+
+
+
+
+    h2 {
+  margin-bottom: 16px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.day {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.weather {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.wind {
+  font-size: 12px;
+  color: #666;
+}
+
+    
+</style>
+<body>
+    <div class="wrapper">
+        <div class="longitude">
+            <h1>Longitude</h1>
+            <h3 id="longitude">12345</h3>
+        </div>
+        <div class="latitude">
+            <h1>Latitude</h1>
+            <h3 id="latitude">12345</h3>
+        </div>
+        <div class="city">
+            <h1>City</h1>
+            <h3 id="city">12345</h3>
+        </div>
+    </div>
+    <h2 style="color: white;align-items: center;justify-content: center;display: flex;font-weight: bold;">Today Weather</h2>
+    <div class="weather-detail">
+        <div class="weather-detail-data">
+            <h3>Cloud</h3>
+            <p id="cloud">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Temperature</h3>
+            <p id="temperature">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Feels Like</h3>
+            <p id="feelslike">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Humidity</h3>
+            <p id="humidity">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Min Temp</h3>
+            <p id="min-temp">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Max Temp</h3>
+            <p id="max-temp">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Wind Speed</h3>
+            <p id="wind-speed">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>WindDegree</h3>
+            <p id="wind-degree">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Sunrise</h3>
+            <p id="sunrise">123</p>
+        </div>
+        <div class="weather-detail-data">
+            <h3>Sunset</h3>
+            <p id="sunset">123</p>
+        </div>
+    </div>
+    <h2 style="color: white;align-items: center;justify-content: center;display: flex;font-weight: bold;">Forecast</h2>
+    <div class="forecast">
+        <table>
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Temperature</th>
+                    <th>Feels Like</th>
+                    <th>Humidity</th>
+                    <th>Min Temp</th>
+                    <th>Max Temp</th>
+                    <th>Weather</th>
+                    <th>Cloud</th>
+                    <th>Wind Speed</th>
+                    <th>Wind Degrees</th>
+                </tr>
+            </thead>
+            <tbody class="display"></tbody>
+        </table>
+    </div>
+    <!-- <h2>5 Day Forecast</h2>
+
+    <div class="forecast" id="forecast"></div> -->
+    
+    <script src="promise-task.js"></script>
+</body>
+</html>

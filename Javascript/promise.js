@@ -193,7 +193,7 @@
 
 
 
-// const api1=fetch(`https://jsonplaceholder.typicode.com/users`).then(response =>{
+// fetch(`https://jsonplaceholder.typicode.com/users`).then(response =>{
 //     if(response.ok){
 //         return response.json();
 //     }else{
@@ -345,16 +345,91 @@
 
 
 
-const p=new Promise((resolve,reject) =>{
-    setTimeout(() =>{
-        resolve('Promise Resolved');
-    },5000);
-});
+// const p1=new Promise((resolve,reject) =>{
+//     setTimeout(() =>{
+//         resolve('Promise Resolved');
+//     },5000);
+// });
 
-async function handlePromise() {
-    console.log('Javascript');
-    const val=await p;
-    console.log('hello')
-    console.log(val);
-}
-handlePromise()
+// const p2=new Promise((resolve,reject) =>{
+//     setTimeout(() =>{
+//         resolve('Promise Resolved');
+//     },10000);
+// });
+
+// async function handlePromise() {
+//     console.log('Javascript');
+//     const val1=await p1;
+//     console.log('hello')
+//     console.log(val1);
+
+//     const val2=await p2;
+//     console.log('hello')
+//     console.log(val2);
+// }
+// handlePromise()
+
+
+
+// // this
+// 'use strict'
+// // this in global space
+
+// console.log(this)
+
+
+// // this inside function
+
+// function x(){
+//     console.log(this);
+// }
+// x()
+// window.x()
+
+
+// // this inside object's method
+
+// const obj={
+//     a:10,
+//     x:function(){
+//         console.log(this.a);    
+//     },
+// };
+// obj.x()
+
+
+// // call,apply,bind method
+
+// const obj1={
+//     a:20,
+// };
+
+// obj.x.call(obj1)
+
+
+// // this inside arrow function
+
+// const obj2={
+//     a:10,
+//     x:() =>{
+//         console.log(this);
+//     },
+// };
+// obj2.x()    
+
+
+// const obj3={
+//     a:10,
+//     x:function(){
+//         const y=()=>{
+//             console.log(this);
+//         };
+//         y();
+//     },
+// };
+// obj3.x()
+
+
+
+// this inside DOM
+
